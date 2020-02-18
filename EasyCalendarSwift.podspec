@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyCalendarSwift'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'EasyCalendarSwift'
 
 # This description is used to generate tags and improve search results.
@@ -39,5 +39,5 @@ Create calendars for months.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'SnapKit', '~> 0.1'
+#  s.dependency 'SnapKit', '~> 0.1'
 end
