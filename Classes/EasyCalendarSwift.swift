@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EasyCalendarSwift: UIView {
+public class EasyCalendarView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
