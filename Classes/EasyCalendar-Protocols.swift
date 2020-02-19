@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol EasyCalendarDataSource {
+public protocol EasyCalendarDataSource {
     func dateReserved(d:Date) -> Bool
     func dateTitle(d:Date) -> String?
 }
 
-protocol EasyCalendarDelegate {
+public protocol EasyCalendarDelegate {
     func dateDidTaped(d:Date)
     func dateRangeDidSelect(start:Date, finish:Date)
 }
