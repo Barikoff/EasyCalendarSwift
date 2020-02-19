@@ -135,16 +135,16 @@ extension EasyCalendarView: UICollectionViewDelegate {
 }
 
 extension EasyCalendarView: UICollectionViewDelegateFlowLayout {
-    private func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let f = self.frame
         return CGSize(width: f.size.width, height: lblMonthTitle.frame.size.height)
     }
 
-    private func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         let f = self.frame
         return CGSize(width: f.size.width, height: 1)
     }
-    private func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let f = self.frame
         return CGSize(width: f.size.width / 7, height: (f.size.height - lblMonthTitle.frame.size.height) / CGFloat(weeksCount()))
     }
