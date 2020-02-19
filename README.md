@@ -15,16 +15,21 @@ let calendar = EasyCalendarViewController()
 /// setup calendar parameters
 calendar.showInactiveDays = true
 /// can select days in calendar and send it to delegate via dateDidTaped
-calendar.canSelectDay:Bool = true
+calendar.canSelectDay = true
 /// can select range of unreserved days in calendar and send it to delegate via dateRangeDidSelect
-calendar.canSelectRange:Bool = true
+calendar.canSelectRange = true
 /// can select date less than today
-calendar.canSelectDateInPast:Bool = false
+calendar.canSelectDateInPast = false
 /// show days from neared months (inactive days)
-calendar.showInactiveDays:Bool = false
+calendar.showInactiveDays = false
 /// show day of weeks
-calendar.showDayOfWeeks:Bool = true
-    
+calendar.showDayOfWeeks = true
+
+// day of weeks setup (for russian locale Monday is first day of week)
+calendar.dowRus = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"]
+calendar.dowEng = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+calendar.localeIdentifier = "ru" // or calendar.localeIdentifier = Locale.current.identifier    
+
 // setup datasource & delegate
 calendar.dataSource = self
 calendar.delegate = self
