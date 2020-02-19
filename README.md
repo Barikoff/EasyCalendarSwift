@@ -22,7 +22,7 @@ pod 'EasyCalendarSwift'
 
 ## Author
 
-barikoff, barikoff@gmail.com
+Dmitry Baranov, work@barikoff.ru
 
 ## License
 
