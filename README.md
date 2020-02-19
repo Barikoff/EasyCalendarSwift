@@ -9,6 +9,34 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```swift
+
+let calendar = EasyCalendarViewController()
+/// setup calendar parameters
+calendar.showInactiveDays = true
+/// can select days in calendar and send it to delegate via dateDidTaped
+calendar.canSelectDay:Bool = true
+/// can select range of unreserved days in calendar and send it to delegate via dateRangeDidSelect
+calendar.canSelectRange:Bool = true
+/// can select date less than today
+calendar.canSelectDateInPast:Bool = false
+/// show days from neared months (inactive days)
+calendar.showInactiveDays:Bool = false
+/// show day of weeks
+calendar.showDayOfWeeks:Bool = true
+    
+// setup datasource & delegate
+calendar.dataSource = self
+calendar.delegate = self
+
+// add as subview
+var f = CGRect(x: 20, y: 30, width: 300, height: 300)
+calendar.view.frame = f
+self.view.addSubview(calendar.view)
+
+// setup any month by some date
+calendar.setup(date: Date())
+```
 ## Requirements
 
 ## Installation
