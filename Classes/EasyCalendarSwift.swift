@@ -11,12 +11,7 @@ public class EasyCalendarView: UIView {
     var dataSource:EasyCalendarDataSource?
     var delegate:EasyCalendarDelegate?
     
-    var date:Date = Date() {
-        didSet {
-            debugPrint("\(self.date)")
-            setup()
-        }
-    }
+    var date:Date = Date()
     
     private var leftSwipeRec:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipe(rec:)))
     private var rightSwipeRec:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(rightSwipe(rec:)))
@@ -68,7 +63,8 @@ public class EasyCalendarView: UIView {
         }
     }
     
-    func setup() {
+    func setup(date:Date) {
+        self.date = date
         lblMonthTitle.text = "MONTH"
         daysCollectionView.reloadData()
     }
